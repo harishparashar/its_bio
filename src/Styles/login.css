@@ -1,0 +1,93 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.login{
+	height: 100vh;
+	width: 100%;
+	background-image: url('../images/business.jpg');
+	background-size: cover;
+}
+.container{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.login_left{
+/*width: 50%;
+border : 1px solid black;*/
+margin-left: 100px
+}
+
+.login_right{
+	width: 450px;
+	height: 280px;
+	background-color: white;
+padding: 30px 30px;
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: space-between;
+    margin-left: 150px;
+
+}
+
+.top_right{
+	height: 20%;
+}
+
+.input_box{
+	height: 50%;
+}
+.button{
+
+	height: 15%;
+} 
+.button button{
+border-radius: 15px;
+    margin: 10px 0px;
+    text-align: center;
+    background-color: #1e1e50;
+    color: wheat;
+    padding: 2px 24px;
+}
+.input_text{
+	display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.input_text input{
+	outline: 0;
+	margin-bottom: 10px;
+	border :none;
+	border-bottom: 1px solid grey;
+}
+
+@media screen and (max-width:950px){
+	.login_left{
+		margin-left: 0px;
+	}
+	.login_right{
+		margin-left: 0px;
+	}
+}
+
+@media screen and (max-width:600px){
+	.login_left{
+		margin-left: 0px;
+	}
+	.login_right{
+		width: 200px;
+		margin-left: 0px;
+	}
+}
+
+
+
