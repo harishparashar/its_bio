@@ -1,0 +1,9 @@
+.icon{
+    width: 20px;
+    z-index: 1;
+    margin-left: 390px;
+}
+
+.errorvalidation{
+	color: red;
+}

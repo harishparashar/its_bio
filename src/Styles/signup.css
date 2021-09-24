@@ -1,0 +1,85 @@
+
+
+.signup{
+	height: 100vh;
+	width: 100%;
+	background-image:  url('../images/business.jpg');
+	background-size: cover;
+}
+.container{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.signup_left{
+margin-left: 100px
+}
+
+.signup_right{
+	/* width: 450px;
+    height: 578px; */
+	background-color: white;
+    padding: 15px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+
+.input_box{
+	height: 91%;
+}
+
+.input_text{
+	display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: space-between;
+/* margin-bottom: 15px; */
+/*border:1px solid black;*/
+}
+
+.input_text input{
+	outline: 0;
+	margin-top: -15px;
+	border :none;
+	border-bottom: 1px solid grey;
+	width: 100%;
+}
+
+.input_text select{
+	outline: 0;
+	margin-top: -10px;
+	border :none;
+	border-bottom: 1px solid grey;
+}
+
+.input_text label{
+    padding-top: 2px;
+    font-size: 15px;
+}
+
+.button{
+    margin: 15px 0px;
+} 
+.button button{
+border-radius: 15px;
+    margin: 8px 0px;
+    text-align: center;
+    background-color:  #343489;;
+    color: wheat;
+    padding: 5px 20px;
+    color: white;
+}
+.signup_top_right{
+	margin-bottom: 18px;
+}
+
+
+

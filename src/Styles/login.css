@@ -2,6 +2,7 @@
 	margin:0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Source Sans Pro', serif;
 }
 
 .login{
@@ -26,7 +27,7 @@ margin-left: 100px
 
 .login_right{
 	width: 450px;
-	height: 280px;
+	height: 300px;
 	background-color: white;
 padding: 30px 30px;
 display: flex;
@@ -37,38 +38,39 @@ justify-content: space-between;
 
 }
 
-.top_right{
-	height: 20%;
+.login_top_right{
+	height: 10%;
 }
 
-.input_box{
-	height: 50%;
+.login_input_box{
+	height: 40%;
 }
-.button{
+.login_button{
 
-	height: 15%;
+	height: 18%;
 } 
-.button button{
+.login_button button{
 border-radius: 15px;
-    margin: 10px 0px;
+    margin: 22px 0px;
     text-align: center;
     background-color: #1e1e50;
     color: wheat;
     padding: 2px 24px;
 }
-.input_text{
+.login_input_text{
 	display: flex;
 flex-wrap: wrap;
 flex-direction: column;
 justify-content: space-between;
 }
 
-.input_text input{
+.login_input_text input{
 	outline: 0;
-	margin-bottom: 10px;
 	border :none;
 	border-bottom: 1px solid grey;
+	width: 100%;
 }
+
 
 @media screen and (max-width:950px){
 	.login_left{

@@ -3,16 +3,10 @@ var helper = {
 
     post: async (jsonObj = {}, path = "", token) => {
       const url = process.env.GATSBY_API_URL + path;
-      const res = await fetch(url, {
-        method: "POST",
-        body: JSON.stringify(jsonObj),
-        headers: {
-          "Content-Type": "application/json,charset=utf-8",
-          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization,Access-Control-Allow-Headers',
-        'Access-Control-Allow-Methods': 'GET,HEAD,OPTIONS,POST,PUT,PATCH,DELETE',
-        "Access-Control-Allow-Origin": "*",
-          
-        }
+      const res = await axios( {
+        method: "post",
+        url:url,
+        data : jsonObj
       });
       return { response: await res, status: await res.status };
     },
