@@ -3,6 +3,7 @@ var helper = {
 
     post: async (jsonObj = {}, path = "", token) => {
       const url = process.env.GATSBY_API_URL + path;
+      console.log(url);
       const res = await axios( {
         method: "post",
         url:url,
