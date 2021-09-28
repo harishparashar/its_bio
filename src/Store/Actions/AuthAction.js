@@ -6,6 +6,7 @@ import { CONFIRM_LOGIN_ACTION, CONFIRM_SIGNUP_ACTION } from './AllAction';
 
 
 
+
 const Toast = Swal.mixin({
   toast: true,
   position: 'top-end',
@@ -27,6 +28,7 @@ export function LoginAction(email, password) {
           type: "success",
           title: res.message,
         });
+        localStorage.setItem("token" ,res.token)
         navigate('/')
       } else {
         Toast.fire({
@@ -68,6 +70,7 @@ export function SignupAction(acconttype, companyname,compemail,linkdin,country,p
       dispatch(confirmedsignupAction(res))
   }
 }
+
 
 export function confirmedLoginAction(payload) {
   return {

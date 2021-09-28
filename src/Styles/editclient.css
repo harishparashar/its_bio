@@ -1,0 +1,103 @@
+.e_main_box{
+    position: relative;
+  }
+  
+  .e_container{
+  background-image: linear-gradient(#e31111, #e3e378);
+  width: 100%;
+      height: 120px;
+  }
+  .e_container1{
+      background-color: #ede6e6;
+      width: 80%;
+      height: 530px;
+      z-index: 1;
+      display: flex;
+      position: absolute;
+      top: 36px;
+      left: 10%;
+  }
+  
+  .e_content{
+      width: 50%;
+      padding: 20px 20px;
+  }
+  
+  
+  .e_add_client{
+    display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  }
+  
+  .e_add_client input{
+      margin-top: 15px;
+      border: 1px solid #141313;
+      height: 35px;
+      border-right: 0px solid white;
+      border-left:  0px solid white;
+  }
+  
+  .e_add_client select{
+      margin-top: 15px;
+      border: 1px solid #141313;
+      height: 35px;
+      border-right: 0px solid white;
+      border-left: 0px solid white;
+  }
+  
+  .e_add_client label{
+      padding-top: 10px;
+  }
+  
+  .e_add_para label{
+      padding-top: 10px;
+  }
+  
+  .e_add_para{
+       margin-top: 15px;
+      border: 1px solid #141313;
+      height: 150px;
+  }
+  
+  
+  .e_add_button button{
+  border-radius: 22px;
+      margin: 15px 0px;
+      text-align: center;
+      background-color: rgb(34 50 139);
+      color: wheat;
+      padding: 6px 40px;
+  }
+  
+  
+  .e_content1{
+   width: 50%;
+      padding: 20px 20px;
+      display: flex;
+      position: relative;
+      text-align: center;
+      justify-content: space-around;
+  }
+  
+  .e_image_logo{
+  position: absolute;
+      right: 65px;
+      top: 25px;
+  }
+  
+  .e_img_logo img{
+          border-radius: 140px;
+      padding: 15px;
+      width: 180px;
+      height: 180px;
+  }
+  
+  
+  .e_update_butoon button{
+          border-radius: 16px;
+      background-color: rgb(34 50 139);
+      color: white;
+      padding: 4px 21px;
+  }

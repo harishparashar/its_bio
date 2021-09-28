@@ -1,6 +1,7 @@
 let apiUrl = {
     login:'signin',
-    signUp:'signup'
+    signUp:'signup',
+    profilePic:'profile-picture'
 }
 
 export default apiUrl;

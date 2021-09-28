@@ -1,13 +1,27 @@
-import axios from 'axios'
+import axios from 'axios';
+
+// let token = localStorage.getItem('token');
+
 var helper = { 
 
     post: async (jsonObj = {}, path = "", token) => {
       const url = process.env.GATSBY_API_URL + path;
-      console.log(url);
       const res = await axios( {
         method: "post",
         url:url,
         data : jsonObj
+      });
+      return { response: await res, status: await res.status };
+    },
+
+    formpost: async (jsonObj = {}, path = "") => {
+      const url = process.env.GATSBY_API_URL + path;
+      const res = await axios( {
+        method: "post",
+        url:url,
+        data : jsonObj,
+        headers:{'Content-Type': 'multipart/form-data','Authorization': `${localStorage.getItem('token')}` }
+        
       });
       return { response: await res, status: await res.status };
     },

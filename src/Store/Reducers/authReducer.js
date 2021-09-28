@@ -8,6 +8,7 @@ const InitialState = {
 }
 
 const AuthReducer = (state = InitialState, action) => {
+  console.log("action",action)
   if (action.type === CONFIRM_LOGIN_ACTION) {
     return {
       ...state,
@@ -17,4 +18,5 @@ const AuthReducer = (state = InitialState, action) => {
   return state
 }
 
-export default AuthReducer
+export default AuthReducer;
+

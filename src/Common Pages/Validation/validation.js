@@ -10,7 +10,7 @@
     meta: { touched, error, warning }
   }) => (
     <div>
-      <label>{label}</label>
+      {/* <label>{label}</label> */}
       <div>
         <input {...input} placeholder={label} type={type} />
         {touched &&
