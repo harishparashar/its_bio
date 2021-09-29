@@ -1,4 +1,4 @@
-import Helper from '../../Common Pages/Constants/helper';
+import Helper from '../../Common Pages/Constants/helper'
 import apiPath from '../../Common Pages/Constants/apiPath'
 import Swal from 'sweetalert2';
 import { CONFIRM_PROFILEPIC_ACTION } from './AllAction';
@@ -18,9 +18,7 @@ export function ProfilePicAction(img) {
     bodyFormData.append('profilepic', img);
        let path = apiPath.profilePic;
       const fr = await Helper.formpost(bodyFormData, path);
-      console.log("fr",fr)
       const res = fr.response.data;
-      console.log("res",res)
       if (res.success === true) {
         Toast.fire({
           type: "success",

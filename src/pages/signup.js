@@ -33,7 +33,7 @@ function Signup(props) {
         <div className="container">
           <div className="signup_left">
             <img
-              src="https://cdn-clklo.nitrocdn.com/MYSuIlnSDlfpMrNTtwCzrqpXpFLTEsHf/assets/static/optimized/rev-4a01c7f/wp-content/uploads/2019/12/logo-2.png"
+              src="https://cdn-clklo.nitrocdn.com/MYSuIlnSDlfpMrNTtwCzrqpXpFLTEsHf/assets/static/optimized/rev-88ba4c9/wp-content/uploads/2019/12/logo-2.png"
               alt="logo"
             />
           </div>

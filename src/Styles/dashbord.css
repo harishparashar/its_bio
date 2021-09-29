@@ -115,7 +115,7 @@
   padding: 65px 36px;
 }
 .d_header_icon i{
-padding: 0px 2px;
+padding: 0px 5px;
 }
 
 @media (max-width: 648px) {
@@ -128,4 +128,32 @@ padding: 0px 2px;
     display: flex;
     flex-direction: column;
   }
+}
+
+
+.filelabel {
+  width: 120px;
+  border-radius: 5px;
+  display: block;
+  transition: border 300ms ease;
+  cursor: pointer;
+  text-align: center;
+}
+.filelabel i {
+  display: block;
+  font-size: 20px;
+  position: absolute;
+  left: 340px;
+  top: 270px;
+}
+.filelabel i {
+color: grey;
+transition: 200ms color;
+}
+
+.filelabel:hover i {
+color: #1665c4;
+}
+#FileInput{
+  display:none;
 }

@@ -13,7 +13,7 @@ function Header(props){
 
            <header>
   <div className="h_logo_img">
-    <img src="https://cdn-clklo.nitrocdn.com/MYSuIlnSDlfpMrNTtwCzrqpXpFLTEsHf/assets/static/optimized/rev-4a01c7f/wp-content/uploads/2019/12/logo-2.png" alt="logo" /> 
+    <img src="https://cdn-clklo.nitrocdn.com/MYSuIlnSDlfpMrNTtwCzrqpXpFLTEsHf/assets/static/optimized/rev-88ba4c9/wp-content/uploads/2019/12/logo-2.png" alt="logo" /> 
   </div>
   <div className="h_header_text">
     <span>{props.name}</span> 

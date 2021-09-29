@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Header from "../../components/Header/header"
 import "../../Styles/dashbord.css"
 import img1 from "../../images/p1.jpg"
@@ -19,11 +19,13 @@ import dimg from '../../images/child1.jpeg'
 import { Link } from "gatsby"
 import { useDispatch, useSelector } from "react-redux"
 import { ProfilePicAction } from "../../Store/Actions/ProfilePicAction"
-import AuthReducer from "../../Store/Reducers/authReducer"
+import { ProfileAction } from "../../Store/Actions/ProfileAction"
 
 
 export default function Dashbord() {
-  const [img,setImg] =useState()
+  const [img,setImg] =useState();
+  const [pic,setpic] = useState('');
+const [alldata] = useState('')
   const data = {
     tiles: [
       {
@@ -51,19 +53,26 @@ export default function Dashbord() {
   }
 
   const dispatch =useDispatch();
-  // const auth = useSelector((state)=>{
-  //   console.log("state",state)
-  // });
-  // console.log("auth",auth)
- 
+  const profiledispatch =useDispatch();
+  const imgData = useSelector((state=>{
+    console.log("state",state)
+    return state.ProfileReducer.data?.Data
+  }))
+  console.log("imgdata",imgData)
+  console.log("alldata",alldata)
+
+
 
   const handelChange = (e)=>{
-    // console.log("e",e.target.files[0].name)
-    setImg(e.target.files[0].name)
-    dispatch(ProfilePicAction(img))
+    setImg(e.target.files[0])
+    dispatch(ProfilePicAction(e.target.files[0]))
+    profiledispatch(ProfileAction(alldata))
   }
 
-
+  useEffect(() => {
+    console.log("run")
+    profiledispatch(ProfileAction(alldata))
+  },[])
 
   return (
     <div>
@@ -80,9 +89,11 @@ export default function Dashbord() {
             <section className="s">
               <div className="d-flex " style={{ flexWrap: "wrap" }}>
                 <div className="d_logo">
-                  <img src={dimg} />
-                  <button><FaPlusCircle/></button>
-                  <input type='file'  onChange={handelChange} />
+                  <img src={imgData?.profilepic} alt="ProfileImage" />
+                  <label class="filelabel">
+                  <i><FaPlusCircle/></i>
+                  <input type='file'  onChange={handelChange} className="FileUpload1" id="FileInput"/>
+                  </label>
                   </div>
                 <div className="s1">
                   <h3> webmaster-infotech</h3> <p>software developement</p>
@@ -95,7 +106,7 @@ export default function Dashbord() {
                   <p> <FaMapMarkerAlt />Jaipur india</p>
                 </div>
                 <div className="s4">
-                <Link to='/EditClient'> <button className="btn badge rounded-pill  float-left rounded-3 w-21 h-9 text-start mt-1">
+                <Link to='/EditProfile'> <button className="btn badge rounded-pill  float-left rounded-3 w-21 h-9 text-start mt-1">
                     Edit Profile
                   </button></Link>
 

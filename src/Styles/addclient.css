@@ -36,6 +36,7 @@
       border: 1px solid #141313;
       height: 35px;
       border-right: 0px solid white;
+      width: 100%;
   }
   .ac_add_client label{
       padding-top: 10px;
@@ -51,6 +52,7 @@
       border: 1px solid #141313;
       height: 150px;
       border-right: 0px solid white;
+      width: 100%;
   }
   
   

@@ -3,8 +3,16 @@ import Header from "../../components/Header/header"
 import Layout from "../../components/layout"
 import "../../Styles/addclient.css"
 import logoimage from '../../images/child1.jpeg'
+import {Field, reduxForm,} from 'redux-form'
+import { useDispatch } from "react-redux"
+import { renderField, renderTextArea } from "../../Common Pages/Validation/validation"
+import { required } from "../../Common Pages/Validation"
+import { AddClientAction } from "../../Store/Actions/AddClientAction"
 
-export default function AddClient() {
+ function AddClient(props) {
+  const {handleSubmit } = props
+  const dispatch = useDispatch();
+
   return (
     <>
     <Layout>
@@ -13,35 +21,24 @@ export default function AddClient() {
         <div className="ac_container"></div>
         <div className="ac_container1">
           <div className="ac_content">
-            <form className="ac_form_group">
+            <form className="ac_form_group" onSubmit={handleSubmit((formValues=>{
+      dispatch(AddClientAction(formValues.name,formValues.technology,formValues.description)) 
+      // console.log(formValues)
+    }))}>
               <div className="ac_add_client">
                 <label>Client Name</label>
-                <input type="text" />
+                <Field type="text" name="name" component={renderField} validate={required} />
               </div>
               <div className="ac_add_client">
                 <label>Technology</label>
-                <input type="text" />
+                <Field type="text" name="technology" component={renderField} validate={required} />
               </div>
               <div className="ac_add_client">
                 <label>Description</label>
-                <textarea className="add_para">
-                  The CSS property border-radius adds rounded corners on images.
-                  You can round all of the image's corners or just select
-                  corners, vary the radius on different corners or display an
-                  image in the shape of an oval or a circle.The CSS property
-                  border-radius adds rounded corners on images. You can round
-                  all of the image's corners or just select corners, vary the
-                  radius on different corners or display an image in the shape
-                  of an oval or a circle.You can round all of the image's
-                  corners or just select corners, vary the radius on different
-                  corners or display an image in the shape of an oval or a
-                  circle.You can round all of the image's corners or just select
-                  corners, vary the radius on different corners or display an
-                  image in the shape of an oval or a circle
-                </textarea>
+                <Field type="textarea" className="add_para" name="description" component={renderTextArea} validate={required}  />
               </div>
               <div className="ac_add_button">
-                <button>Save</button>
+                <button type="submit">Save</button>
               </div>
             </form>
           </div>
@@ -65,3 +62,8 @@ export default function AddClient() {
     </>
   )
 }
+
+
+export default reduxForm({
+  form:'AddClient'
+}) (AddClient)

@@ -24,7 +24,7 @@ import { renderField } from '../Common Pages/Validation/validation'
       <div className="l_login">
   <div className="l_container">
     <div className="l_login_left">
-      <img src="https://cdn-clklo.nitrocdn.com/MYSuIlnSDlfpMrNTtwCzrqpXpFLTEsHf/assets/static/optimized/rev-4a01c7f/wp-content/uploads/2019/12/logo-2.png" alt="logo" />
+      <img src="https://cdn-clklo.nitrocdn.com/MYSuIlnSDlfpMrNTtwCzrqpXpFLTEsHf/assets/static/optimized/rev-88ba4c9/wp-content/uploads/2019/12/logo-2.png" alt="logo" />
     </div>
     <form className="l_login_right" onSubmit={handleSubmit((formValues=>{
       dispatch(LoginAction(formValues.email,formValues.password)) 
