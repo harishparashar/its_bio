@@ -8,6 +8,7 @@ import img6 from "../../images/p6.jpg"
 import "bootstrap/dist/css/bootstrap.min.css"
 import '../../Styles/client.css'
 import Header from "../../components/Header/header"
+import { Link } from "gatsby"
 
 export default function Client() {
   const data = {
@@ -56,9 +57,10 @@ export default function Client() {
                     )
                   })}
                   <div className="client_button">
+                    <Link to='/AddClient'>
                     <button>
                       add new client
-                    </button>
+                    </button></Link>
                   </div>
                 </div>
               </div>

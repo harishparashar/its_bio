@@ -3,6 +3,7 @@ import apiPath from '../../Common Pages/Constants/apiPath'
 import Swal from 'sweetalert2';
 import { navigate } from 'gatsby-link';
 import { CONFIRM_EDIT_PROFILE_ACTION } from './AllAction';
+import { ProfileAction } from './ProfileAction';
 
 
 

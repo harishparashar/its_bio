@@ -101,3 +101,22 @@
       color: black;
       padding: 2px 35px;
   }
+
+  /* @media screen and (max-width:950px){
+	.ac_content{
+		margin-left: 0px;
+	}
+	.ac_content{
+		margin-left: 0px;
+	}
+}
+
+@media screen and (max-width:600px){
+	.ac_content1{
+		margin-left: 0px;
+	}
+	.ac_content1{
+		width: 200px;
+		margin-left: 0px;
+	}
+} */

@@ -1,7 +1,7 @@
 import Helper from '../../Common Pages/Constants/helper'
 import apiPath from '../../Common Pages/Constants/apiPath'
 import Swal from 'sweetalert2';
-import { CONFIRM_PROFILE_ACTION } from './AllAction';
+import { CONFIRM_PROFILE_ACTION,UPDATE_PROFILE_ACTION } from './AllAction';
 
 const Toast = Swal.mixin({
   toast: true,
@@ -10,9 +10,7 @@ const Toast = Swal.mixin({
   timer: 3000
 });
 
-
-
-export function ProfileAction(data) {
+export function ProfileAction() {
   return async(dispatch) => {
     let path = apiPath.user_Profile;
     let fr = await Helper.get(path);
@@ -35,4 +33,5 @@ export function confirmProfileAction(payload) {
       payload,
     }
   }
+
 

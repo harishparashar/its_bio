@@ -3,21 +3,14 @@ import Header from "../../components/Header/header"
 import Layout from "../../components/layout"
 import '../../Styles/editclient.css'
 import logoimage from '../../images/child1.jpeg'
-import Helper from '../../Common Pages/Constants/helper';
-import apiPath from '../../Common Pages/Constants/apiPath'
-import Swal from 'sweetalert2';
-import { navigate } from 'gatsby-link';
 import { useDispatch, useSelector } from "react-redux"
 import { EditProfileAction } from "../../Store/Actions/EditProfileAction"
+import { ProfileAction } from "../../Store/Actions/ProfileAction"
+import { ProfilePicAction } from "../../Store/Actions/ProfilePicAction"
 
-const Toast = Swal.mixin({
-  toast: true,
-  position: 'top-end',
-  showConfirmButton: false,
-  timer: 3000
-});
 
 export default function EditProfile() {
+  const [img,setImg] =useState();
   const [cname,setCname]=useState('');
   const [ctype,setCtype]=useState('');
   const [location,setLocation]=useState('');
@@ -25,15 +18,19 @@ export default function EditProfile() {
   
 const dispatch = useDispatch();
 const Data = useSelector((state=>{
-  console.log("state",state)
+  return state.ProfileReducer.data?.Data
+}))
+
+const profiledispatch =useDispatch();
+const imgData = useSelector((state=>{
   return state.ProfileReducer.data?.Data
 }))
 
 
-
 useEffect(() => {
+  profiledispatch(ProfileAction())
   setCname(Data?.companyname);
-      setCtype(Data?.accounttype)
+      setCtype(Data?.companytype)
       setLocation(Data?.location);
       setDescription(Data?.aboutus); 
 }, []);
@@ -41,7 +38,14 @@ useEffect(() => {
 const profileSubmit =(e)=>{
 e.preventDefault();
 dispatch(EditProfileAction(cname,ctype,location,desc));
+}
 
+
+
+const handelChange = (e)=>{
+  setImg(e.target.files[0])
+  dispatch(ProfilePicAction(e.target.files[0]))
+  
 }
 
   return (
@@ -61,8 +65,8 @@ dispatch(EditProfileAction(cname,ctype,location,desc));
                 <label>Company Type</label>
                 <select value={ctype} onChange={(e)=>setCtype(e.target.value)}>
                   <option disabled>Select Company Type</option>
-                  <option>Freelancer</option>
-                  <option>Company</option>
+                  <option value="Freelancer">Freelancer</option>
+                  <option value="Company">Company</option>
                 </select>
               </div>
               <div className="e_add_client">
@@ -83,10 +87,13 @@ dispatch(EditProfileAction(cname,ctype,location,desc));
           <div className="e_content1">
             <div className="e_image_logo">
               <div className="e_img_logo">
-                <img src={logoimage} alt="logo" />
+              <img src={imgData?.profilepic} alt="ProfileImage" />
               </div>
               <div className="e_update_butoon">
-                <button>Update Logo</button>
+              <label class="e_filelabel">
+              <i>Update Logo</i>
+                  <input type='file'  onChange={handelChange} className="FileUpload1" id="EFileInput"/>
+                  </label>                
               </div>
             </div>
             <div className="e_content2"></div>

@@ -2,6 +2,7 @@ import Helper from '../../Common Pages/Constants/helper'
 import apiPath from '../../Common Pages/Constants/apiPath'
 import Swal from 'sweetalert2';
 import { CONFIRM_PROFILEPIC_ACTION } from './AllAction';
+import { ProfileAction } from './ProfileAction';
 
 const Toast = Swal.mixin({
   toast: true,
@@ -13,6 +14,7 @@ const Toast = Swal.mixin({
 
 
 export function ProfilePicAction(img) {
+  console.log("img",img)
   return async(dispatch) => {
     var bodyFormData = new FormData();
     bodyFormData.append('profilepic', img);
@@ -24,6 +26,7 @@ export function ProfilePicAction(img) {
           type: "success",
           title: res.message,
         });
+        dispatch(ProfileAction())
       } else {
         Toast.fire({
           type: "error",

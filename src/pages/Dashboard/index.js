@@ -24,8 +24,6 @@ import { ProfileAction } from "../../Store/Actions/ProfileAction"
 
 export default function Dashbord() {
   const [img,setImg] =useState();
-  const [pic,setpic] = useState('');
-const [alldata] = useState('')
   const data = {
     tiles: [
       {
@@ -55,23 +53,17 @@ const [alldata] = useState('')
   const dispatch =useDispatch();
   const profiledispatch =useDispatch();
   const imgData = useSelector((state=>{
-    console.log("state",state)
     return state.ProfileReducer.data?.Data
   }))
-  console.log("imgdata",imgData)
-  console.log("alldata",alldata)
-
-
 
   const handelChange = (e)=>{
     setImg(e.target.files[0])
     dispatch(ProfilePicAction(e.target.files[0]))
-    profiledispatch(ProfileAction(alldata))
+    
   }
 
   useEffect(() => {
-    console.log("run")
-    profiledispatch(ProfileAction(alldata))
+    profiledispatch(ProfileAction())
   },[])
 
   return (

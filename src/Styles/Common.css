@@ -7,3 +7,33 @@
 .errorvalidation{
 	color: red;
 }
+
+
+.e_filelabel {
+    width: 120px;
+    border-radius: 5px;
+    display: block;
+    transition: border 300ms ease;
+    cursor: pointer;
+    text-align: center;
+  }
+  .e_filelabel i {
+    display: block;
+    font-size: 18px;
+    position: absolute;
+    left: 40px;
+    top: 190px;
+    background-color: #091670;
+    padding: 0px 5px;
+  }
+  .e_filelabel i {
+  color: grey;
+  transition: 200ms color;
+  }
+  
+  .e_filelabel:hover i {
+  color: #1665c4;
+  }
+  #EFileInput{
+    display:none;
+  }
