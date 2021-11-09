@@ -16,7 +16,7 @@ function Header(props){
     <img src="https://cdn-clklo.nitrocdn.com/MYSuIlnSDlfpMrNTtwCzrqpXpFLTEsHf/assets/static/optimized/rev-88ba4c9/wp-content/uploads/2019/12/logo-2.png" alt="logo" /> 
   </div>
   <div className="h_header_text">
-    <span>{props.name}</span> 
+    <span style={{fontSize:"16px"}}>{props.name}</span> 
   </div>
   <div className="h_header_icon">
     <i><FaBell /></i>

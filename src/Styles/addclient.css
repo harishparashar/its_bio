@@ -5,22 +5,23 @@
   .ac_container{
   background-image: linear-gradient(#e31111, #e3e378);
   width: 100%;
-      height: 120px;
+      height: 12.0rem;
   }
   .ac_container1{
       background-color: #ede6e6;
       width: 80%;
-      height: 465px;
+      height: 46.5rem;
       z-index: 1;
       display: flex;
       position: absolute;
-      top: 36px;
+      top: 3.6rem;
       left: 10%;
   }
   
   .ac_content{
       width: 50%;
-      padding: 20px 20px;
+      padding: 2.0rem 2.0rem;
+      font-size: 1.4rem;
   }
   
   
@@ -32,91 +33,92 @@
   }
   
   .ac_add_client input{
-      margin-top: 15px;
-      border: 1px solid #141313;
-      height: 35px;
-      border-right: 0px solid white;
+      margin-top: 1.0rem;
+      border: .1rem solid #141313;
+      height: 3.5rem;
+      border-right: 0rem solid white;
       width: 100%;
   }
-  .ac_add_client label{
-      padding-top: 10px;
-  }
-  
-  .add_para label{
-      padding-top: 10px;
-  }
+
   
   .add_para{
-      padding: 0px 5px;
-       margin-top: 15px;
-      border: 1px solid #141313;
-      height: 150px;
-      border-right: 0px solid white;
+      padding: 0rem .5rem;
+       margin-top: 1.5rem;
+      border: .1rem solid #141313;
+      height: 15.0rem;
+      border-right: 0rem solid white;
       width: 100%;
   }
   
   
   .ac_add_button button{
-  border-radius: 22px;
-      margin: 15px 0px;
+  border-radius: 2.2rem;
+      margin: 1.5rem 0rem;
       text-align: center;
       background-color: rgb(34 50 139);
       color: wheat;
-      padding: 6px 40px;
+      padding: .6rem 4.0rem;
+      border: none;
   }
   
   
   .ac_content1{
    width: 50%;
-      padding: 20px 20px;
+      padding: 2.0rem 2.0rem;
       display: flex;
       position: relative;
       text-align: center;
       justify-content: space-around;
+      font-size: 1.4rem;
   }
   
   .ac_img_logo img{
-    padding: 25px;
-    width: 225px;
-    height: 235px;
+    padding: 2.5rem;
+    width: 22.5rem;
+    height: 23.5rem;
   }
   
   .ac_logo_button{
-    margin: 36px 20px;
+    margin: 3.6rem 2.0rem;
   }
   
   
   .ac_update_butoon button{
-          border-radius: 22px;
-      margin: 30px 0px;
+          border-radius: 2.2rem;
+      margin: 3.0rem 0rem;
       background-color: rgb(34 50 139);
       color: wheat;
-      padding: 2px 18px;
+      padding: .2rem 1.8rem;
   }
   
   .ac_delete_button button{
       outline: 0;
-      border-radius: 22px;
+      border-radius: 2.2rem;
       text-align: center;
       color: black;
-      padding: 2px 35px;
+      padding: .2rem 3.5rem;
   }
 
-  /* @media screen and (max-width:950px){
+  @media screen and (max-width:950px){
 	.ac_content{
-		margin-left: 0px;
+		width: 50%;
 	}
 	.ac_content{
-		margin-left: 0px;
+		width: 50%;
 	}
 }
 
 @media screen and (max-width:600px){
 	.ac_content1{
-		margin-left: 0px;
+		width: 100%;
 	}
 	.ac_content1{
-		width: 200px;
-		margin-left: 0px;
+		width: 100%;
 	}
-} */
+
+    .ac_update_butoon button{
+        width: 50%;
+        margin: 0px;
+    }
+}
+
